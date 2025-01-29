@@ -55,20 +55,23 @@ star_data %>%
   summarize(r = cor(x,y))
 ```
 
-Compare to the r of dino which is -0.0645, the r of star is -0.0630 which is slightly larger. But they btoh have negative correlation between `x` and `y`.
+Compare to the r of dino which is -0.0645, the r of star is -0.0630 which is slightly larger. But they both have negative correlation between `x` and `y`.
 
 ### Exercise 4
 
-(Add code and narrative as needed. Note that two R chunks are given but they are not labeled. Use the convention from above to name them appropriately.)
+Plot `y` vs.`x` for the circle dataset:
 
-```{r}
-
-
+```{r plot-circle}
+circle_data <- datasaurus_dozen%>%
+  filter(dataset == "circle")
+ggplot(data = circle_data, mapping = aes (x = x, y = y)) + geom_point()
 ```
 
-```{r}
+Correlation between `x` and `y` in this dataset:
 
-
+```{r cor-circle}
+circle_data %>%
+  summarize(r = cor(x,y))
 ```
 
 ### Exercise 5
