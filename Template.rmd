@@ -17,6 +17,7 @@ library(datasauRus)
 
 ### Exercise 1
 
+According to the data table, there are 3 columns (dataset, x, and y) and 1846 rows that the datasaurus_dozen file have.
 
 
 ### Exercise 2
